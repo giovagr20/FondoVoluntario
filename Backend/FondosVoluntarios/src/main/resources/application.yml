@@ -1,0 +1,18 @@
+# Servidor
+server:
+  servlet:
+    context-path: /fondovoluntarios/
+
+# Spring Config
+spring:
+  # Conexion DB Azure PostgreSQL
+  datasource:
+    platform: postgres
+    jdbc-url: jdbc:postgresql://localhost:5432/postgres?sslmode=require
+    username: adminbots@psql-sradminbotsdllo18f51e8e
+    password: ENC(oClix0zGv1KZUtUdoU0xfI2vKYg5JCliiuwai5WgGzE=)
+    driver-class-name: org.postgresql.Driver
+
+# Cors
+cors:
+  url-permitida: https://local.suranet.com:4200
