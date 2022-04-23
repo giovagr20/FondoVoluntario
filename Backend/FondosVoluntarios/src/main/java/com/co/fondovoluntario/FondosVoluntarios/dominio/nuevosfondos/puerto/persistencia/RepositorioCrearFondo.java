@@ -2,11 +2,14 @@ package com.co.fondovoluntario.FondosVoluntarios.dominio.nuevosfondos.puerto.per
 
 import com.co.fondovoluntario.FondosVoluntarios.dominio.nuevosfondos.modelo.Fondos;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface RepositorioCrearFondo {
 
     Optional<Boolean> guardar(Fondos fondo);
 
-    Optional<Boolean> eliminar(Long id);
+    Optional<Fondos> consultarXId(Long id);
+
+    Optional<List<Fondos>> consultarTodos();
 }

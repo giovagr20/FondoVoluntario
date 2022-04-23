@@ -7,6 +7,7 @@ import com.co.fondovoluntario.FondosVoluntarios.infraestructura.utilidades.jdbc.
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
+import java.util.List;
 import java.util.Optional;
 
 public class RepositorioCrearFondoImpl implements RepositorioCrearFondo {
@@ -37,7 +38,12 @@ public class RepositorioCrearFondoImpl implements RepositorioCrearFondo {
     }
 
     @Override
-    public Optional<Boolean> eliminar(Long id) {
+    public Optional<Fondos> consultarXId(Long id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Fondos>> consultarTodos() {
         return Optional.empty();
     }
 }
