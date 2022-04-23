@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface RepositorioCrearFondo {
 
-    Optional<Boolean> guardar (Fondos fondo);
+    Optional<Boolean> guardar(Fondos fondo);
 
     Optional<Boolean> eliminar(Long id);
 }

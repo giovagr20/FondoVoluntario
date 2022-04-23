@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class DtoFondo  {
+public class DtoFondo {
     private String nombreFondo;
     private Long montoMinimo;
     private String categoria;

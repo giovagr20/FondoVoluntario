@@ -7,7 +7,6 @@ import com.co.fondovoluntario.FondosVoluntarios.infraestructura.utilidades.jdbc.
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 public class RepositorioCrearFondoImpl implements RepositorioCrearFondo {
