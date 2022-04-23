@@ -1,7 +1,7 @@
-package com.co.fondovoluntario.FondosVoluntarios.infraestructura.rest;
+package com.co.fondovoluntario.FondosVoluntarios.infraestructura.nuevosfondos.rest;
 
 import com.co.fondovoluntario.FondosVoluntarios.aplicacion.casosdeuso.nuevosfondos.dto.DtoFondo;
-import com.co.fondovoluntario.FondosVoluntarios.infraestructura.servicios.ServicioFondosFPV;
+import com.co.fondovoluntario.FondosVoluntarios.infraestructura.nuevosfondos.servicios.ServicioFondosFPV;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;

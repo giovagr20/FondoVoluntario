@@ -14,6 +14,6 @@ public class ServiciosCrearFondo {
     }
 
     public Optional<Boolean> crearFondo(Fondos fondo) {
-        return Optional.of(Boolean.TRUE);
+        return repositorioCrearFondo.guardar(fondo);
     }
 }

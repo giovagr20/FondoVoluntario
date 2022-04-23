@@ -1,13 +1,12 @@
 package com.co.fondovoluntario.FondosVoluntarios.dominio.nuevosfondos.puerto.persistencia;
 
 import com.co.fondovoluntario.FondosVoluntarios.dominio.nuevosfondos.modelo.Fondos;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 
-public interface RepositorioCrearFondo extends CrudRepository<Fondos, Long> {
+import java.util.Optional;
 
-    Boolean guardar (Fondos fondos);
+public interface RepositorioCrearFondo {
 
-    Boolean eliminar(Long id);
+    Optional<Boolean> guardar (Fondos fondo);
 
+    Optional<Boolean> eliminar(Long id);
 }

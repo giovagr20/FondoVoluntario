@@ -1,4 +1,4 @@
-package com.co.fondovoluntario.FondosVoluntarios.infraestructura.servicios;
+package com.co.fondovoluntario.FondosVoluntarios.infraestructura.nuevosfondos.servicios;
 
 import com.co.fondovoluntario.FondosVoluntarios.aplicacion.casosdeuso.nuevosfondos.dto.DtoFondo;
 import com.co.fondovoluntario.FondosVoluntarios.aplicacion.casosdeuso.nuevosfondos.manejador.ManejadorFondos;
