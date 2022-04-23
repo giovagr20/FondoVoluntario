@@ -5,6 +5,7 @@ import com.co.fondovoluntario.FondosVoluntarios.aplicacion.casosdeuso.nuevosfond
 import com.co.fondovoluntario.FondosVoluntarios.dominio.nuevosfondos.servicios.ServiciosCrearFondo;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -20,5 +21,13 @@ public class ManejadorFondos {
 
     public Optional<Boolean> crearFondo(DtoFondo fondo) {
         return serviciosCrearFondo.crearFondo(fondosMapper.dtoAModelo(fondo).orElse(null));
+    }
+
+    public Optional<List<DtoFondo>> consultar() {
+        return fondosMapper.listaModeloAListaDto(serviciosCrearFondo.consultar().orElse(null));
+    }
+
+    public Optional<DtoFondo> consultarXId(Long id) {
+        return fondosMapper.modeloADto(serviciosCrearFondo.consultarXId(id).orElse(null));
     }
 }

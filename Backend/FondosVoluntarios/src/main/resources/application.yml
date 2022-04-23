@@ -1,7 +1,7 @@
 # Servidor
 server:
   servlet:
-    context-path: /fondovoluntarios/
+    context-path: /fondosvoluntarios/
 
 # Spring Config
 spring:

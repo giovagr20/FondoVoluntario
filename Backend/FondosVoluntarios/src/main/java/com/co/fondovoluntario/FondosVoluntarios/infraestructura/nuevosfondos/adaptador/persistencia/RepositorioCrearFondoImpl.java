@@ -18,6 +18,10 @@ public class RepositorioCrearFondoImpl implements RepositorioCrearFondo {
     private String sqlGuardar;
     @SqlStatement(namespace = "nuevosfondos", value = "eliminar")
     private String sqlEliminar;
+    @SqlStatement(namespace = "nuevosfondos", value = "consultarXId")
+    private String sqlConsultarXId;
+    @SqlStatement(namespace = "nuevosfondos", value = "consultar")
+    private String sqlConsultar;
 
     public RepositorioCrearFondoImpl(CustomJdbcTemplate customJdbcTemplate) {
         this.customJdbcTemplate = customJdbcTemplate;
@@ -39,11 +43,18 @@ public class RepositorioCrearFondoImpl implements RepositorioCrearFondo {
 
     @Override
     public Optional<Fondos> consultarXId(Long id) {
-        return Optional.empty();
+        SqlParameterSource parametros = new MapSqlParameterSource()
+                .addValue("id", id);
+        Optional<Fondos> fondos = customJdbcTemplate.findOne(sqlConsultarXId, parametros, new FondosRowMapper());
+        if (fondos.isEmpty()) {
+            return Optional.empty();
+        }
+
+        return fondos;
     }
 
     @Override
     public Optional<List<Fondos>> consultarTodos() {
-        return Optional.empty();
+        return customJdbcTemplate.listAll(sqlConsultar, new FondosRowMapper());
     }
 }
