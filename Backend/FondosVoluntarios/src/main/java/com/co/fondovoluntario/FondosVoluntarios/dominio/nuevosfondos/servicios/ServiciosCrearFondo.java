@@ -15,6 +15,11 @@ public class ServiciosCrearFondo {
     }
 
     public Optional<Boolean> crearFondo(Fondos fondo) {
+
+        if (fondo.getMontoMinimo() < 500000) {
+            return Optional.of(Boolean.FALSE);
+        }
+
         return repositorioCrearFondo.guardar(fondo);
     }
 
