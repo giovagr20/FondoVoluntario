@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS fondosvoluntarios.fondos(
     monto INTEGER,
     categoria VARCHAR(100),
     PRIMARY KEY (id)
-)
+);

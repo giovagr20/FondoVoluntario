@@ -3,9 +3,11 @@ package com.co.fondovoluntario.FondosVoluntarios.aplicacion.casosdeuso.nuevosfon
 import com.co.fondovoluntario.FondosVoluntarios.aplicacion.casosdeuso.nuevosfondos.dto.DtoFondo;
 import com.co.fondovoluntario.FondosVoluntarios.aplicacion.utilidades.MapperGeneral;
 import com.co.fondovoluntario.FondosVoluntarios.dominio.nuevosfondos.modelo.Fondos;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
+@Component
 public class FondosMapper implements MapperGeneral<DtoFondo, Fondos> {
 
     @Override

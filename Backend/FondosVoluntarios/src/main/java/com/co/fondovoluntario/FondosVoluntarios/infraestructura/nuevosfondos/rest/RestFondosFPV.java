@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/api/fpv")
 @Tag(name = "Controlador encargado de realizar las transacciones del fondo")
@@ -36,7 +35,7 @@ public class RestFondosFPV {
     }
 
     @Operation(summary = "Rest para obtener fondos")
-    @GetMapping
+    @GetMapping("consultar")
     public ResponseEntity<List<DtoFondo>> obtenerFondos() {
         try {
             return ResponseEntity.status(HttpStatus.OK)
@@ -48,7 +47,7 @@ public class RestFondosFPV {
     }
 
     @Operation(summary = "Rest para obtener un fondo especifico")
-    @GetMapping
+    @GetMapping("consultar/{id}")
     public ResponseEntity<DtoFondo> obtenerXId(@RequestParam Long id) {
         try {
             return ResponseEntity.status(HttpStatus.OK)

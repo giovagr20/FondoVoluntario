@@ -8,10 +8,15 @@ spring:
   # Conexion DB PostgreSQL
   datasource:
     platform: postgres
-    jdbc-url: jdbc:postgresql://localhost:5432/postgres
-    username: adminbots@psql-sradminbotsdllo18f51e8e
-    password: ENC(oClix0zGv1KZUtUdoU0xfI2vKYg5JCliiuwai5WgGzE=)
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: mysecretpassword
     driver-class-name: org.postgresql.Driver
+
+# Flyway configuration
+flyway:
+  mixed: true
+  clean-disabled: true
 
 # Cors
 cors:
