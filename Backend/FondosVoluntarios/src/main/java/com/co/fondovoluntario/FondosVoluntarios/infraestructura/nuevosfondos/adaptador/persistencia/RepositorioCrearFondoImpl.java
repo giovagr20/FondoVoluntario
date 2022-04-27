@@ -32,7 +32,7 @@ public class RepositorioCrearFondoImpl implements RepositorioCrearFondo {
     @Override
     public Optional<Boolean> guardar(Fondos fondo) {
         SqlParameterSource parametros = new MapSqlParameterSource()
-                .addValue("nombre_fondo", fondo.getNombreFondo())
+                .addValue("nombreFondo", fondo.getNombreFondo())
                 .addValue("monto", fondo.getMontoMinimo())
                 .addValue("categoria", fondo.getCategoria());
         Optional<Long> id = customJdbcTemplate.save(sqlGuardar, parametros, "id");

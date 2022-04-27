@@ -14,8 +14,12 @@ public class ServicioFondosFPV {
         this.manejadorFondos = manejadorFondos;
     }
 
-    public Boolean crearFondo(DtoFondo fondo) {
-        return manejadorFondos.crearFondo(fondo).orElse(null);
+    public String crearFondo(DtoFondo fondo) {
+        if (Boolean.TRUE.equals(manejadorFondos.crearFondo(fondo).orElse(null))) {
+            return "Se ha guardado con éxito el registro.";
+        }
+
+        return "No se ha guardado el registro, por favor validar.";
     }
 
     public List<DtoFondo> consultar() {

@@ -24,13 +24,14 @@ public class RestFondosFPV {
 
     @Operation(summary = "Rest para suscribirse a un nuevo fondo")
     @PostMapping(value = "/suscribirse")
-    public ResponseEntity<Boolean> crearFondo(@RequestBody DtoFondo fondo) {
+    public ResponseEntity<String> crearFondo(@RequestBody DtoFondo fondo) {
         try {
             return ResponseEntity.status(HttpStatus.OK)
                     .body(servicioFondosFPV.crearFondo(fondo));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(Boolean.FALSE);
+                    .body("No se ha guardado el registro: Ha ocurrido un error, " +
+                            "por favor contacte al administrador");
         }
     }
 
