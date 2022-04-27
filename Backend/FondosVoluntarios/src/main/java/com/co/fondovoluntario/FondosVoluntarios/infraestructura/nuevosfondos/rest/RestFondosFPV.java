@@ -48,7 +48,7 @@ public class RestFondosFPV {
 
     @Operation(summary = "Rest para obtener un fondo especifico")
     @GetMapping("consultar/{id}")
-    public ResponseEntity<DtoFondo> obtenerXId(@RequestParam Long id) {
+    public ResponseEntity<DtoFondo> obtenerXId(@PathVariable("id") Integer id) {
         try {
             return ResponseEntity.status(HttpStatus.OK)
                     .body(servicioFondosFPV.consultarXId(id));

@@ -22,7 +22,7 @@ public class ServicioFondosFPV {
         return manejadorFondos.consultar().orElse(null);
     }
 
-    public DtoFondo consultarXId(Long id) {
+    public DtoFondo consultarXId(Integer id) {
         return manejadorFondos.consultarXId(id).orElse(null);
     }
 }

@@ -44,7 +44,7 @@ public class RepositorioCrearFondoImpl implements RepositorioCrearFondo {
     }
 
     @Override
-    public Optional<Fondos> consultarXId(Long id) {
+    public Optional<Fondos> consultarXId(Integer id) {
         SqlParameterSource parametros = new MapSqlParameterSource()
                 .addValue("id", id);
         Optional<Fondos> fondos = customJdbcTemplate.findOne(sqlConsultarXId, parametros, new FondosRowMapper());

@@ -9,7 +9,7 @@ public interface RepositorioCrearFondo {
 
     Optional<Boolean> guardar(Fondos fondo);
 
-    Optional<Fondos> consultarXId(Long id);
+    Optional<Fondos> consultarXId(Integer id);
 
     Optional<List<Fondos>> consultarTodos();
 }

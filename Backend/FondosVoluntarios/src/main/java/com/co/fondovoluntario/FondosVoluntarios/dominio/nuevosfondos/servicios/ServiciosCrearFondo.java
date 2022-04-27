@@ -27,7 +27,7 @@ public class ServiciosCrearFondo {
         return repositorioCrearFondo.consultarTodos();
     }
 
-    public Optional<Fondos> consultarXId(Long id ) {
+    public Optional<Fondos> consultarXId(Integer id ) {
         return repositorioCrearFondo.consultarXId(id);
     }
 }
